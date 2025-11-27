@@ -122,7 +122,7 @@ export default function LoginStyled() {
             </div>
 
             {/* FORM */}
-            <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+            <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
               <motion.div initial="hidden" animate="show" className="space-y-3">
                 
                 {/* Email */}
@@ -205,9 +205,9 @@ export default function LoginStyled() {
               </motion.div>
             </form>
 
-            <div className="mt-4 text-center text-sm text-gray-600">
+            <div className="mt-2 text-center text-sm text-gray-600">
               Don't have an account?{" "}
-              <a href="/signup" className="text-green-600 font-medium hover:underline">
+              <a href="/login" className="text-green-600 font-medium hover:underline">
                 Sign up
               </a>
             </div>
