@@ -21,7 +21,7 @@ export default function Hero() {
   return (
     <section className="w-full min-h-screen bg-white overflow-hidden">
       {/* Main Hero Section */}
-      <div className="relative  flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 mt-26 md:mt-30">
+      <div className="relative  flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 mt-26 md:mt-32">
         {/* Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-20 left-10 w-52 sm:w-64 h-52 sm:h-72 bg-gradient-to-r from-amber-100 to-yellow-100 rounded-full blur-3xl opacity-60 animate-pulse"></div>
@@ -125,7 +125,7 @@ export default function Hero() {
             { value: "50k+", label: "Customers" },
             { value: "15+", label: "Rooms" },
           ].map((item, idx) => (
-            <div key={idx} className="flex flex-col gap-2">
+            <div key={idx} className="flex flex-col gap-1">
               <h2 className="text-2xl sm:text-3xl md:text-4xl text-green-600 font-bold">
                 {item.value}
               </h2>
