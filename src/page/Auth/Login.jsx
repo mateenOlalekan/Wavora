@@ -76,14 +76,14 @@ export default function LoginStyled() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="flex items-center justify-center w-full md:w-1/2 py-10 md:py-0"
+          className="flex items-center justify-center w-full md:w-1/2 py-8 md:py-0"
         >
           <div
-            className="w-full max-w-lg sm:max-w-lg lg:max-w-2xl p-6 sm:p-8 rounded-2xl"
+            className="w-full max-w-lg sm:max-w-lg lg:max-w-2xl p-4 sm:p-6 rounded-2xl"
             style={theme === "neo" ? neuStyle : {}}
           >
             {/* Header */}
-            <div className="flex flex-col items-center justify-between mb-4 space-y-4">
+            <div className="flex flex-col items-center justify-between mb-3 space-y-3">
               <img src={Wavora} alt="logo" className="w-16 md:w-24" />
               <h2 className="text-xl font-bold">Welcome Back</h2>
               <p className="text-xs text-gray-600">Login to your account</p>
@@ -93,7 +93,7 @@ export default function LoginStyled() {
             <motion.div
               initial="hidden"
               animate="show"
-              className="flex flex-col sm:flex-row gap-3 mb-6"
+              className="flex flex-col sm:flex-row gap-3 mb-4"
             >
               <motion.button
                 variants={fieldVariants}
