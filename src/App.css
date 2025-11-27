@@ -1,0 +1,32 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Global Reset */
+html{
+  scroll-behavior: smooth;
+}
+
+/* Base Body Styles */
+body {
+  font-family: 'Jost';
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #f9f9f9; /* optional, light background */
+  color: #222; /* default text color */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar but allow scrolling */
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
