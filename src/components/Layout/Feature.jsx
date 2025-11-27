@@ -1,6 +1,8 @@
 import image1 from "../../assets/image1.jpg";
 import image2 from "../../assets/image2.jpg";
 import image3 from "../../assets/image3.jpg";
+import { Zap, Lock, MapPin, Calendar, Users, Leaf } from "lucide-react";
+
 
 const features = [
   {
@@ -68,27 +70,45 @@ export default function Features() {
           </div>
 
           {/* Right Content - Features List */}
-          <div className="w-full lg:w-1/2 flex flex-col gap-6 bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
-            <div className="text-center mb-4">
-              <h3 className="text-2xl font-bold text-gray-900">What We Offer</h3>
-              <p className="text-gray-600 mt-2">Everything you need to do your best work</p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {[
-                { text: "Gigabit Fiber Internet & Backup Power", icon: "⚡" },
-                { text: "24/7 Secure Access & CCTV Monitoring", icon: "🔒" },
-                { text: "Prime Central Business District Location", icon: "📍" },
-                { text: "Weekly Networking Events & Workshops", icon: "🎯" },
-                { text: "Vibrant Community of Professionals", icon: "👥" },
-                { text: "Sustainable & Eco-Friendly Design", icon: "🌱" },
-              ].map((item, i) => (
-                <div key={i} className="flex items-center gap-4 p-3 rounded-lg hover:bg-gray-50 transition">
-                  <span className="text-xl">{item.icon}</span>
-                  <p className="text-gray-700 font-medium">{item.text}</p>
-                </div>
-              ))}
-            </div>
-          </div>
+<div className="w-full lg:w-1/2 flex flex-col gap-5 bg-white rounded-2xl shadow-xl p-5 border border-gray-100">
+  
+  {/* Header */}
+  <div className="text-center">
+    <h3 className="text-3xl font-bold text-gray-900 tracking-tight">
+      What We Offer
+    </h3>
+    <p className="text-gray-600 mt-2 text-base">
+      Everything you need to do your best work
+    </p>
+  </div>
+
+  {/* Features */}
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+    {[
+      { text: "Gigabit Fiber Internet & Backup Power", icon: Zap },
+      { text: "24/7 Secure Access & CCTV Monitoring", icon: Lock },
+      { text: "Prime Central Business District Location", icon: MapPin },
+      { text: "Weekly Networking Events & Workshops", icon: Calendar },
+      { text: "Vibrant Community of Professionals", icon: Users },
+      { text: "Sustainable & Eco-Friendly Design", icon: Leaf },
+    ].map((item, i) => (
+      <div
+        key={i}
+        className="flex items-start gap-2 p-4 rounded-xl bg-gray-50 hover:bg-gray-100 transition-all duration-300"
+      >
+        <div className="w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center">
+          <item.icon className="w-6 h-6 text-green-600" />
+        </div>
+
+        <p className="text-gray-800 font-medium leading-snug text-sm md:text-base">
+          {item.text}
+        </p>
+      </div>
+    ))}
+  </div>
+
+</div>
+
         </div>
 
         {/* Explore Section */}

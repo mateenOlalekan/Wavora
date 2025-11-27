@@ -117,7 +117,7 @@ export default function Hero() {
 
 
       </div>
-      <div className="bg-[#ECFDF3] w-full mt-10 py-5">
+      <div className="bg-[#ECFDF3] w-full mt-14 py-5">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 text-center w-full  mx-auto px-4 sm:px-6 lg:px-8">
           {[
             { value: "5+", label: "Experience" },
