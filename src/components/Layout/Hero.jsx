@@ -21,7 +21,7 @@ export default function Hero() {
   return (
     <section className="w-full min-h-screen bg-white overflow-hidden">
       {/* Main Hero Section */}
-      <div className="relative  flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 mt-26 md:mt-32">
+      <div className="relative flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 pt-8 md:pt-12">
         {/* Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-20 left-10 w-52 sm:w-64 h-52 sm:h-72 bg-gradient-to-r from-amber-100 to-yellow-100 rounded-full blur-3xl opacity-60 animate-pulse"></div>
@@ -137,7 +137,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes float {
           0%, 100% { transform: translateY(0px); }
           50% { transform: translateY(-10px); }

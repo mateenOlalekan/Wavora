@@ -207,7 +207,7 @@ export default function LoginStyled() {
 
             <div className="mt-2 text-center text-sm text-gray-600">
               Don't have an account?{" "}
-              <a href="/login" className="text-green-600 font-medium hover:underline">
+              <a href="/register" className="text-green-600 font-medium hover:underline">
                 Sign up
               </a>
             </div>

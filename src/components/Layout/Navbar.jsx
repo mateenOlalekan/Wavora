@@ -16,6 +16,7 @@ export default function Navbar() {
     { name: "Features", type: "scroll", to: "features" },
     { name: "Pricing", type: "scroll", to: "pricing" },
     { name: "FAQ", type: "scroll", to: "faq" },
+    { name: "Blog", type: "route", to: "/blog" },
     { name: "Contact", type: "route", to: "/contact" },
   ];
 
@@ -168,9 +169,8 @@ export default function Navbar() {
             className="w-full px-4 py-3 text-center border border-gray-400 text-gray-700 rounded-xl hover:bg-gray-100 transition"
           >
             Log In
-          </Link>
-          <Link
-            to="/signup"
+          </Link>            <Link
+            to="/register"
             onClick={() => setIsOpen(false)}
             className="w-full px-4 py-3 text-center bg-gradient-to-r from-green-600 to-green-400 text-white rounded-xl shadow-lg hover:opacity-90 transition"
           >

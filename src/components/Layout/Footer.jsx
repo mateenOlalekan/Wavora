@@ -7,6 +7,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { BsTwitterX } from "react-icons/bs";
+import { Link } from "react-router-dom";
 import logo from "../../assets/logo.svg";
 
 function Footer() {
@@ -15,11 +16,20 @@ function Footer() {
   const sections = [
     {
       title: "Products",
-      items: ["Platform Overview", "Features & Tools", "Pricing"],
+      items: [
+        { name: "Platform Overview", to: "/" },
+        { name: "Features & Tools", to: "/#features" },
+        { name: "Pricing", to: "/#pricing" },
+      ],
     },
     {
       title: "Company",
-      items: ["About Us", "Mission & Vision", "Careers", "Blog & Insights"],
+      items: [
+        { name: "About Us", to: "/about" },
+        { name: "Mission & Vision", to: "/about" },
+        { name: "Careers", to: "/careers" },
+        { name: "Blog & Insights", to: "/blog" },
+      ],
     },
   ];
 
@@ -72,13 +82,14 @@ function Footer() {
               <h2 className="font-bold text-lg text-green-700">{section.title}</h2>
               <div className="space-y-3">
                 {section.items.map((item, idx) => (
-                  <p
+                  <Link
                     key={idx}
+                    to={item.to}
                     className="cursor-pointer flex items-center gap-2 text-gray-700 hover:text-green-700 transition group"
                   >
                     <span className="w-2 h-2 bg-green-400 rounded-full group-hover:bg-green-600 transition"></span>
-                    {item}
-                  </p>
+                    {item.name}
+                  </Link>
                 ))}
               </div>
             </div>
@@ -123,10 +134,18 @@ function Footer() {
             </p>
 
             <div className="flex space-x-6 text-gray-600">
-              {["Privacy Policy", "Terms of Service", "Cookies"].map((item, i) => (
-                <span key={i} className="cursor-pointer hover:text-green-700 transition">
-                  {item}
-                </span>
+              {[
+                { name: "Privacy Policy", to: "/privacy-policy" },
+                { name: "Terms of Service", to: "/terms-of-service" },
+                { name: "Cookies", to: "/cookies" },
+              ].map((item, i) => (
+                <Link
+                  key={i}
+                  to={item.to}
+                  className="cursor-pointer hover:text-green-700 transition"
+                >
+                  {item.name}
+                </Link>
               ))}
             </div>
           </div>

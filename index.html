@@ -1,10 +1,55 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./src/assets/Treva.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>wavora</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+    <title>Wavora — Flexible Coworking Spaces & Community</title>
+    <meta
+      name="description"
+      content="Wavora offers flexible desks, private offices, meeting rooms and media studios backed by a vibrant community of founders, creatives and remote teams. Book by the hour, day or month."
+    />
+    <meta name="theme-color" content="#039855" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0e1413" media="(prefers-color-scheme: dark)" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+
+    <!-- Open Graph / social -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Wavora" />
+    <meta property="og:title" content="Wavora — Flexible Coworking Spaces & Community" />
+    <meta
+      property="og:description"
+      content="Flexible desks, private offices and meeting rooms with a community built for founders, creatives and remote teams."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Fonts: preconnect first so the stylesheet request starts sooner -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300..800;1,300..800&display=swap"
+    />
+
+    <script>
+      // Apply the persisted theme before first paint to avoid a flash of the
+      // wrong theme. Kept inline and dependency-free on purpose.
+      (function () {
+        try {
+          var stored = localStorage.getItem("wavora-theme");
+          var prefersDark =
+            window.matchMedia &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches;
+          if (stored === "dark" || (!stored && prefersDark)) {
+            document.documentElement.classList.add("dark");
+          }
+        } catch (e) {
+          /* localStorage unavailable (private mode) — fall back to light */
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

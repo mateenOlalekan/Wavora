@@ -19,7 +19,7 @@ import contactBg from "../assets/contact.jpg";
     <div className="w-full">
       {/* Hero Section */}
       <section
-        className="relative w-full h-[40vh] md:h-[50vh] mt-[65px] flex items-center justify-center bg-cover bg-center"
+        className="relative w-full h-[40vh] md:h-[50vh] flex items-center justify-center bg-cover bg-center"
         style={{ backgroundImage: `url(${contactBg})` }}
       >
         {/* Overlay */}

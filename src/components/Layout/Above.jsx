@@ -4,7 +4,7 @@ import heroImg from "../../assets/Above.jpg";
 export default function ImageBackgroundCard() {
   return (
     <div
-      className="relative w-full flex justify-center items-center h-[400px] sm:h-[500px] lg:h-[600px]overflow-hidden shadow-lg"
+      className="relative w-full flex justify-center items-center h-[400px] sm:h-[500px] lg:h-[600px] overflow-hidden shadow-lg"
       style={{ 
         backgroundImage: `url(${heroImg})`, 
         backgroundSize: "cover", 
